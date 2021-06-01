@@ -1,0 +1,24 @@
+{
+    "family": "chillcup",
+    "executionRoleArn": "arn:aws:iam::244442126831:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+        {
+            "name": "chillcup",
+            "image": "244442126831.dkr.ecr.ap-south-1.amazonaws.com/chillcup:latest",
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 3000,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "512",
+    "memory": "1024"
+}
